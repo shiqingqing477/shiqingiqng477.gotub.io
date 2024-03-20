@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="读书页.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css.css">
+<style>
+			body{
+				margin: 0 auto;
+				padding: 0 0;
+			}
+			#a1{/*外面的div，用来限制图片位置*/
+				overflow:hidden;/*溢出隐藏用*/
+				width: 1260px;
+				height: 460px;
+				/*这里布局中的话可以去查查我记得需要该自身的位置，懒得查直接写px坐标就行*/
+				position: relative;/*把突变的位置放在中间*/
+				top:0%;
+				left: 0%；
+			}
+			#a2{/*里面的div用来调整轮播图*/
+                width: 7000px;
+                position:relative;/*相对坐标方便调整图片*/
+                left:0%;
+                animation-duration: 15s; /*动画播放的秒数*/
+                animation-iteration-count: infinite;/*动画无限循环播放*/
+                animation-name: a;/*动画名是example*/
+                top: 0%;
+			}
+			#a3{/*#a3==img*/
+				float: left;/*应该是左对齐吧我也忘了*/
+				/*display: inline-block;显示啥啥啥的，我也忘了具体是啥，去查查书吧，没有这个可能图片会竖着一排*/
+				left: 90px;
+				width: 1260px;
+				height: 460px;
+				padding: 0px 0px 0px 0px;/*图片之间的间隙*/
+			}
+			
+			/*这里有几个都要算一下，都是负的是因为要从左向右移动图片*/
+			@keyframes a {/*@keyframes表示动画*/
+				0%   {
+					position: absolute;
+					left: 0px;}
+				15%,25%  {/*表示15%到25%之间做什么事*/
+					position: absolute;
+					left: -1260px;
+				  }
+				40%,50%  {
+					position: absolute;
+					left: -2520px;
+				  }
+				65%,75%{
+					position: absolute;
+					left: -3780px;
+				  }
+				90%,99.9999999999999%{
+					/*99.9999999999999%到100%是为了能在非常短的时间切换到第一张图，以便达成一直向右的效果*/
+					position: absolute;
+					left: -5040px;
+				  }
+				100% {
+					position: absolute;
+					left: 0px;
+				  }
+			}
+		.swiper-container {
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        max-height: 450px;
+        margin: 50px 0px;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        transform: scale(1);
+      }
+      .swiper-slide-active,
+      .swiper-slide-duplicate-active {
+        transform: scale(1.2);
+        z-index: 999;
+      }
+
+      .swiper-slide img {
+        width: 300px;
+        height: 100%;
+        max-height: 350px;
+      }
+
+      
+    a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+		</style>
+<link href="swiper.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="table00">
+  <div class="table02">
+    <div class="table02-1"></div>
+    <div class="table02-2">
+      <div class="table13"></div>
+      <div class="table14"><a class="a1" href="首页.html">首页</a></div>
+          <div class="table15"><a style="color:white;background-color: #393023;" class="a2" href="读书页.html">读书</a></div>
+          <div class="table15-1"><a class="a3" href="影视页.html">影视</a></div>
+          <div class="table15-2"><a class="a4" href="音乐页.html">音乐</a></div>
+          <div class="table16"><a class="a5" href="艺术作品页.html">艺术作品</a></div>
+          <div class="table16-1"><a class="a6" href="创作中心.html">创作中心</a></div>
+		  <div class="box01"></div> 
+	      <a href="登录页.html"><div class="box02"></div></a>
+	  <div class="box03"></div> 
+    </div>
+  </div>
+  <div class="table01">
+	<div id="a1">
+			<div id="a2">
+				<a href="https://www.baidu.com"><img id="a3" src="../pic/11.jpg" ></a>
+				<a href="https://www.baidu.com"><img id="a3" src="../pic/12.jpg" ></a>
+				<a href="https://www.baidu.com"><img id="a3" src="../pic/13.jpg" ></a>
+				<a href="https://www.baidu.com"><img id="a3" src="../pic/12.jpg" ></a>
+				<a href="https://www.baidu.com"><img id="a3" src="../pic/11.jpg" ></a>
+			</div>
+	</div>
+  </div>
+  <div class="table03">
+    <div class="table03-0">
+      <div class="table03-1"></div>
+    </div>
+    <div class="table03-2"></div>
+    <div class="table03-3">今日讨论</div>
+  </div>
+  <div class="table11"></div>
+  <div class="table05">
+    <div class="table05-1"></div>
+    <div class="table05-2"></div>
+  </div>
+  <div class="table06"></div>
+  <div class="table06-0">
+    <div class="table06-0-1">
+      <p style="font-size: 24px; color: #393023;"><strong>《咏史》</strong></p>
+      <p style="font-size: 16px; color: #666666;">这首诗的首联回顾以往的朝代，勤俭能使国家昌盛而奢侈腐败会使国家灭亡， </p>
+      <p style="font-size: 16px; color: #666666;">提出了一切政权成败的关键</p>
+      <p style="font-size: 16px; color: #666666;">33645次浏览</p>
+	</div>
+    <div class="table06-0-2">
+      <p style="font-size: 24px; color: #393023;"><strong>《入京》</strong></p>
+      <p style="font-size: 16px; color: #666666;">全诗在抨击当时进贡的歪风的同时，表现出诗人铁骨铮铮，</p>
+      <p style="font-size: 16px; color: #666666;">不愿同流合污的高洁志向和品质。</p>
+      <p style="font-size: 16px; color: #666666;">25644次浏览</p>
+	</div>
+  </div>
+  <div class="table07">
+    <div class="table03-0">
+      <div class="table03-1"></div>
+    </div>
+    <div class="table03-2"></div>
+    <div class="table03-3">文章</div>
+  </div>
+  <div class="table11"></div>
+  <div class="table08">
+    <div class="table08-1"></div>
+    <div class="table08-2"></div>
+    <div class="table08-3"></div>
+  </div>
+  <div class="table09"></div>
+  <div class="table09-0">
+    <div class="table09-0-1">
+      <p style="font-size: 22px; color: #393023;"><strong>以学正风，弘扬清廉之风</strong></p>
+      <p style="font-size: 16px; color: #666666;">25135次浏览</p>
+    </div>
+    <div class="table09-0-2">
+      <p style="font-size: 22px; color: #393023;"><strong>让廉洁成为一种态度</strong></p>
+      <p style="font-size: 16px; color: #666666;">85612次浏览</p>
+	</div>
+    <div class="table09-0-2">
+      <p style="font-size: 22px; color: #393023;"><strong>扬清廉之风，做清廉青年</strong></p>
+      <p style="font-size: 16px; color: #666666;">36504次浏览</p>
+	</div>
+  </div>
+  <div class="table07">
+    <div class="table03-0">
+      <div class="table03-1"></div>
+    </div>
+    <div class="table03-2"></div>
+    <div class="table03-3">小说</div>
+  </div>
+  <div class="table11"></div>
+  <div class="table08">
+    <div class="table08-4"></div>
+    <div class="table08-5"></div>
+    <div class="table08-6"></div>
+  </div>
+  <div class="table09"></div>
+  <div class="table09-0">
+    <div class="table09-0-1">
+      <p style="font-size: 22px; color: #393023;"><strong>《百年廉论》</strong></p>
+      <p style="font-size: 16px; color: #666666;">57811次浏览</p>
+    </div>
+    <div class="table09-0-2">
+      <p style="font-size: 22px; color: #393023;"><strong>《永远在路上》</strong></p>
+      <p style="font-size: 16px; color: #666666;">32556次浏览</p>
+	</div>
+    <div class="table09-0-2">
+      <p style="font-size: 22px; color: #393023;"><strong>《苦难辉煌》</strong></p>
+      <p style="font-size: 16px; color: #666666;">44452次浏览</p>
+	</div>
+  </div>
+  <div class="table10"><a class="a7" href="资源库.html">更多</a></div>
+  <div class="c3">
+    <p style="font-size: 16px">关于我们</p>
+    <p style="font-size: 12px">地址：浙江省杭州市拱墅区湖州街51号浙大城市学院    </p>
+    <p style="font-size: 16px">联系我们    </p>
+    <p style="font-size: 12px">电话：125423355566      </p>
+    <p style="font-size: 12px">电子邮箱：2645422@2665.com</p>
+    <p style="font-size: 12px">&nbsp;</p>
+    <p style="font-size: 12px">沪公网安备 31011502400137号包图网-Copyright © 2018 XX网</p>
+  </div>
+  <div class="c4">
+    <div class="c4-3">关注我们</div>
+    <div class="c4-1">
+      <div class="c4-0"></div>
+      <div class="c4-1-1"></div>
+      <div class="c4-1-2"></div>
+      <div class="c4-1-3"></div>
+    </div>
+	<div class="c4-2">
+	  <div class="c4-2-1">新浪微博</div>
+	  <div class="c4-2-1">微信公众号</div>
+	  <div class="c4-2-1">腾讯微博</div>
+	</div>
+  </div>
+</div>
+</body>
+</html>

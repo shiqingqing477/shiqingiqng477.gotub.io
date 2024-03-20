@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* CSS Document */
+
+.table00{/*总表格*/
+	width: 1440px;
+	height: 900px;
+    background:url("../pic/53.png");
+	margin: 0px auto;
+
+}
+.table02{/**/
+	width: 1260px;
+	height: 103px;
+	margin: auto;
+}
+.table02-1{/**/
+	width: 1260px;
+	height: 53px;
+	margin: auto;
+}
+.table02-2{/**/
+	width: 1260px;
+	height: 50px;
+	margin: auto;
+}
+
+.table13{/**/
+	float:left;
+	width: 44px;
+	height:50px;
+	margin-left:33px;
+    background:url("../pic02/13.png")
+
+}
+
+.table14{/*首页*/
+    width: 50px;
+    height: 25px;
+    float: left;
+    margin-left: 113px;
+	margin-top:20px;
+    border-radius: 12px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    color: #393023;
+
+}
+
+.table15{/*读书*/
+    width: 50px;
+    height: 25px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    color: #393023;
+
+}
+
+.table15-1{/*影视*/
+    width: 50px;
+    height: 25px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    color: #393023;
+
+}
+.table15-2{/*音乐*/
+    width: 50px;
+    height: 25px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    color: #393023;
+
+}
+
+
+.table16{/*艺术作品*/
+    width: 75px;
+    height: 25px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    color: #393023;
+
+}
+
+.table16-1{/*创作中心*/
+    width: 75px;
+    height: 25px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    color: #393023;
+
+}
+.box01{/**/
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin-top: 15px;
+}
+.box02{/**/
+	float: right;
+	width: 40px;
+	height: 30px;
+	margin-top: 15px;
+	border-radius: 12px;
+	background:url("../pic/用户1.png")
+}
+.box03{/**/
+	float: right;
+	width: 40px;
+	height: 30px;
+	margin-top: 15px;
+	margin-right: 7px;
+	border-radius: 12px;
+	background: url("../pic/搜索1.png")
+}
+.table01{/**/
+	width: 1260px;
+	height: 200px;
+	margin: auto;
+}
+.table03{/**/
+	width: 525px;
+	height:395px;
+	border-radius: 12px;
+	margin: auto;
+	background: url("../pic/54.png")
+}
+.table04{/**/
+    width: 160px;
+    height: 100px;
+    line-height: 100px;
+    margin: auto;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+.table05{/**/
+	width: 450px;
+	height: 55px;
+	margin: auto;
+}
+.table06{/**/
+	width: 450px;
+	height:20px;
+	margin: auto;
+}
+
+.table07{/**/
+	width: 450px;
+	height: 65px;
+	line-height: 65px;
+	margin: auto;
+	font-size: 14px;
+    text-align: center;
+    color:white;
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>无标题文档</title>
+    <link href="评论区.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="swiper.css" />
+    <link rel="stylesheet" href="css.css">
+
+    <style>
+      body {
+        margin: 0 auto;
+        padding: 0 0;
+      }
+      #a1 {
+        /*外面的div，用来限制图片位置*/
+        overflow: hidden; /*溢出隐藏用*/
+        width: 1260px;
+        height: 460px;
+        /*这里布局中的话可以去查查我记得需要该自身的位置，懒得查直接写px坐标就行*/
+        position: relative; /*把突变的位置放在中间*/
+        top: 0%;
+        left: 0%；;
+      }
+      #a2 {
+        /*里面的div用来调整轮播图*/
+        width: 7000px;
+        position: relative; /*相对坐标方便调整图片*/
+        left: 0%;
+        animation-duration: 15s; /*动画播放的秒数*/
+        animation-iteration-count: infinite; /*动画无限循环播放*/
+        animation-name: a; /*动画名是example*/
+        top: 0%;
+      }
+      #a3 {
+        /*#a3==img*/
+        float: left; /*应该是左对齐吧我也忘了*/
+        /*display: inline-block;显示啥啥啥的，我也忘了具体是啥，去查查书吧，没有这个可能图片会竖着一排*/
+        left: 90px;
+        width: 1260px;
+        height: 460px;
+        padding: 0px 0px 0px 0px; /*图片之间的间隙*/
+      }
+
+      /*这里有几个都要算一下，都是负的是因为要从左向右移动图片*/
+      @keyframes a {
+        /*@keyframes表示动画*/
+        0% {
+          position: absolute;
+          left: 0px;
+        }
+        15%,
+        25% {
+          /*表示15%到25%之间做什么事*/
+          position: absolute;
+          left: -1260px;
+        }
+        40%,
+        50% {
+          position: absolute;
+          left: -2520px;
+        }
+        65%,
+        75% {
+          position: absolute;
+          left: -3780px;
+        }
+        90%,
+        99.9999999999999% {
+          /*99.9999999999999%到100%是为了能在非常短的时间切换到第一张图，以便达成一直向右的效果*/
+          position: absolute;
+          left: -5040px;
+        }
+        100% {
+          position: absolute;
+          left: 0px;
+        }
+      }
+
+      .swiper {
+        position: relative;
+        width: 100%;
+        height: 360px !important;
+        overflow: hidden;
+        margin: 30px 0px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        height: 360px !important;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 46px;
+        box-sizing: border-box;
+        background: rgba(107, 67, 15, 0.8);
+        border-radius: 20px;
+      }
+
+      .swiper-slide .avatar {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin-right: 18px;
+        overflow: hidden;
+      }
+
+      .swiper-slide .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .swiper-slide .title .info p,
+      .swiper-slide .title .info h5 {
+        margin: 0px;
+        font-size: 16px;
+      }
+
+      .swiper-slide .info p {
+        text-align: left;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 65px;
+      }
+
+      .swiper-slide .info span,
+      .swiper-slide .info a {
+        display: block;
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .swiper-slide .info span {
+        color: #373737;
+      }
+      .swiper-slide .info a {
+        color: #fff;
+        margin-top: 15px;
+      }
+      .swiper-slide .title .info h5 {
+        color: #fff;
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+      .swiper-slide .avatar img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-pagination {
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="table00">
+      <div class="table02">
+        <div class="table02-1"></div>
+        <div class="table02-2">
+          <div class="table13"></div>
+          <div class="table14"><a class="a1" href="首页.html">首页</a></div>
+          <div class="table15"><a class="a2" href="读书页.html">读书</a></div>
+          <div class="table15-1"><a class="a3" href="影视页.html">影视</a></div>
+          <div class="table15-2"><a class="a4" href="音乐页.html">音乐</a></div>
+          <div class="table16"><a class="a5" href="艺术作品页.html">艺术作品</a></div>
+          <div class="table16-1"><a class="a6" href="创作中心.html">创作中心</a></div>
+		  <div class="box01"></div> 
+	      <a href="登录页.html"><div class="box02"></div></a>
+	      <div class="box03"></div> 
+        </div>
+      </div>
+      <div class="table01">
+        <div id="a1">
+          <div id="a2">
+            <a href="https://www.baidu.com"
+              ><img id="a3" src="../pic/11.jpg"
+            /></a>
+            <a href="https://www.baidu.com"
+              ><img id="a3" src="../pic/12.jpg"
+            /></a>
+            <a href="https://www.baidu.com"
+              ><img id="a3" src="../pic/13.jpg"
+            /></a>
+            <a href="https://www.baidu.com"
+              ><img id="a3" src="../pic/12.jpg"
+            /></a>
+            <a href="https://www.baidu.com"
+              ><img id="a3" src="../pic/11.jpg"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="table03">
+        <div class="table03-0">
+          <div class="table03-1"></div>
+        </div>
+        <div class="table03-2"></div>
+        <div class="table03-3">今日讨论</div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="title">
+                <span class="avatar"><img src="../pic/OIP-C.jpg"/></span>
+                <div class="info">
+                  <h5>用户12345</h5>
+                  <p>2022.10.30</p>
+                </div>
+              </div>
+              <div class="info">
+                <p>紧凑的剧情，很典型的香港电影，很好看!</p>
+                <span>电影：《反贪风暴》</span>
+                <a href="#" class="more">了解更多</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">
+                <span class="avatar"><img src="../pic/下载 (1).jpg"/></span>
+                <div class="info">
+                  <h5>用户12345</h5>
+                  <p>2022.10.30</p>
+                </div>
+              </div>
+              <div class="info">
+                <p>紧凑的剧情，很典型的香港电影，很好看!</p>
+                <span>电影：《反贪风暴》</span>
+                <a href="#" class="more">了解更多</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">
+                <span class="avatar"><img src="../pic/15.png" /></span>
+                <div class="info">
+                  <h5>用户12345</h5>
+                  <p>2022.10.30</p>
+                </div>
+              </div>
+              <div class="info">
+                <p>紧凑的剧情，很典型的香港电影，很好看!</p>
+                <span>电影：《反贪风暴》</span>
+                <a href="#" class="more">了解更多</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">
+                <span class="avatar"><img src="../pic/16.png" /></span>
+                <div class="info">
+                  <h5>用户12345</h5>
+                  <p>2022.10.30</p>
+                </div>
+              </div>
+              <div class="info">
+                <p>紧凑的剧情，很典型的香港电影，很好看!</p>
+                <span>电影：《反贪风暴》</span>
+                <a href="#" class="more">了解更多</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">
+                <span class="avatar"><img src="../pic/202171522585283445.jpg" /></span>
+                <div class="info">
+                  <h5>用户12345</h5>
+                  <p>2022.10.30</p>
+                </div>
+              </div>
+              <div class="info">
+                <p>紧凑的剧情，很典型的香港电影，很好看!</p>
+                <span>电影：《反贪风暴》</span>
+                <a href="#" class="more">了解更多</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">
+                <span class="avatar"><img src="../pic/OIP (1).jpg" /></span>
+                <div class="info">
+                  <h5>用户12345</h5>
+                  <p>2022.10.30</p>
+                </div>
+              </div>
+              <div class="info">
+                <p>紧凑的剧情，很典型的香港电影，很好看!</p>
+                <span>电影：《反贪风暴》</span>
+                <a href="#" class="more">了解更多</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="table05">
+        <div class="table05-1"></div>
+        <div class="table05-2"></div>
+        <div class="table05-3"></div>
+      </div>
+      <div class="table05-0"></div>
+      <div class="table06">
+    <div class="box09"></div>
+    <div class="table09">
+	  <div class="table09-0">      
+	    <div class="table09-0-1">
+          <p style="font-size: 18px">经典永流传</p>
+          <p style="font-size: 36px"><strong>经选评论</strong></p>
+          </div>
+	  </div>
+	  <div class="table09-1">
+	    <div class="table09-1-1">
+	      <p>由王晶导演的《金钱帝国》，它</p>
+	      <p>所揭示就是这样一段黑暗历史：</p>
+	      <p>上世纪70年代以前，香港社会贪</p>
+	      <p>污状况非常严重。</p>
+	    </div>
+	  </div>
+	  <div class="table09-2">
+	    <div class="table09-2-1">
+	      <p>由王晶导演的《金钱帝国》，它</p>
+	      <p>所揭示就是这样一段黑暗历史：</p>
+	      <p>上世纪70年代以前，香港社会贪</p>
+	      <p>污状况非常严重。</p>
+	    </div>
+	  </div>
+    </div>
+	  </div>
+      <div class="table07">
+        <div class="table03-0">
+          <div class="table03-1"></div>
+        </div>
+        <div class="table03-2"></div>
+        <div class="table03-3">热点话题</div>
+      </div>
+  <div class="table08">
+    <div class="table08-0"></div>
+    <div class="table08-1">
+      <div class="table08-1-1"></div>
+      <div class="table08-1-2"></div>
+    </div>
+  </div>
+  <div class="c3">
+    <p style="font-size: 16px">关于我们</p>
+    <p style="font-size: 12px">地址：浙江省杭州市拱墅区湖州街51号浙大城市学院    </p>
+    <p style="font-size: 16px">联系我们    </p>
+    <p style="font-size: 12px">电话：125423355566      </p>
+    <p style="font-size: 12px">电子邮箱：2645422@2665.com</p>
+    <p style="font-size: 12px">&nbsp;</p>
+    <p style="font-size: 12px">沪公网安备 31011502400137号包图网-Copyright © 2018 XX网</p>
+  </div>
+  <div class="c4">
+    <div class="c4-3">关注我们</div>
+    <div class="c4-1">
+      <div class="c4-0"></div>
+      <div class="c4-1-1"></div>
+      <div class="c4-1-2"></div>
+      <div class="c4-1-3"></div>
+    </div>
+	<div class="c4-2">
+	  <div class="c4-2-1">新浪微博</div>
+	  <div class="c4-2-1">微信公众号</div>
+	  <div class="c4-2-1">腾讯微博</div>
+	</div>
+  </div>
+</div>
+    <script src="swiper.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
